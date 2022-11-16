@@ -8,16 +8,49 @@
   <!-- ------ JQuery ----------------->
   <script type="text/javascript" src="js/jquery-3.6.1.min.js" ></script>
   <script type="text/javascript" src="js/01-selectores.js" ></script>
-  
+  <style>
+    .zebra{
+      border: 5px dashed black;
+    }
+    .grande{
+      font-size: 30px;
+    }
+    .margen-superior{
+      display: block;
+      margin-top: 45px;
+    }
+    .resaltado{
+      border-bottom: 2px solid greenyellow;
+    }
+  </style>
 </head>
 <!-- -----------------  Body ------------------- -->
 <body> 
   <h1>Apendiendo JQuery</h1>
-  <p id="rojo">Ejercicio de JQuery</p>  
-  <br>
   <hr>
-  <p id="amarillo">Practicando con selectores</p>
-  <p id="verde">Quiero ser un parrafo verde</p>
+  <ul>
+    <li> <a href='https://www.google.com.mx' title="Google">ir a Google . . . </a> </li>
+    <li> <a href='https://www.facebook.com.mx' title="Facebook">ir a Facebook . . . </a></li>
+    
+  </ul>
+  <hr>
+  <p id="rojo" class="sinBorde" >Ejercicio de JQuery</p>  
+  <br>
+  <p id="amarillo" class="zebra" >Practicando con selectores</p>
+  <br>
+  <p id="verde" class="sinBorde" >Quiero ser un parrafo verde</p>
+  <br>
+  <p class="zebra" >Soy un párrafo blanco</p>
+
+  <div>
+    <p>Soy el parrafo de un caja</p>
+    <ul>
+      <li>Elemento 1</li>
+      <li class="resaltado" >Elemento 2</li>
+      <span class="resaltado" >Soy un span con clase resaltado</span>
+    </ul>
+  </div>
+
 
 </body>
 <!-- -----------------  Body ------------------- -->

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+ <!-- ------------------------ ++++++++++++ Head +++++++++++++++ ---------------------->
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aprendiendo JQuery - Eventos</title>
+  <script type="text/javascript" src="js/jquery-3.6.1.min.js" ></script>
+  <script type="text/javascript" src="js/02-eventosB.js" ></script>
+  <style>
+    #caja{
+      width: 250px;
+      height: 250px;
+      border: 2px solid black;
+      background: rgb(13, 255, 0);
+      transition: 300ms all;
+    }
+    /* -------------------- +++++++++++++ OK, pero este efecto hay que haerlo en JS con JQuery */
+    /* #caja:hover{
+      background: rgb(0, 145, 255);
+      cursor: pointer;
+    } */
+    #input{
+      padding: 5px;
+      width: 300px;
+      font-size: 20px;
+    }
+
+    #datos{
+      border: 4px dashed black;
+      padding: 10px;
+      width: 250px;
+      height: 10px;
+      margin-top: 10px;
+      display: none;
+    }
+    #sigueme{
+      width: 25px;
+      height: 25px;
+      position: absolute;
+      display: block;
+      background: red;
+      opacity: 0.3;
+      border-radius: 999px;
+    }
+
+  </style>
+</head>
+<!-- ------------------------ ++++++++++++ Head +++++++++++++++ ---------------------->
+<!-- ------------------------ ++++++++++++ Body +++++++++++++++ ---------------------->
+<body>
+  <h1>Aprendiendo JQuery - EVENTOS </h1>
+  <br>
+  <div id="sigueme"></div>
+  <hr>
+    <form action="">
+      <input type="text" id="nombre" >
+    </form>
+    <br>
+    <div id="datos" >
+
+    </div>
+  <hr>
+  <div id="caja" >
+    soy una caja en un div
+  </div>
+  
+</body>
+<!-- ------------------------ ++++++++++++ Body +++++++++++++++ ---------------------->
+</html>
