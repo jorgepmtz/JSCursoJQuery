@@ -67,7 +67,7 @@ $(document).ready(function(){
  
   $(document).mousemove(function(){
     //$('body').css)('cursor', 'none');
-    $('#sigueme').css('left',event.clientX)
+    $('#sigueme').css('left',event.clientX)     // 2022 11 17 : Me marca como desactualizada la instrucción  event ---------------------- ++++++++++++++++++
                  .css('top',event.clientY);
 
   });
