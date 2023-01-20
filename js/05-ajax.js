@@ -6,7 +6,7 @@ $(document).ready(function(){
   // $('#id_datos').load('https://reqres.in/');
 
 // ------- ++++++++ GET y POST ------ +++++++++++++
-  $.get ('https://reqres.in/api/users', {page: 2}, function(response){
+  $.get ('https://reqres.in/api/users', {page: 1}, function(response){
     //console.log(response);
     response.data.forEach((element, index) => {
       $('#id_datos').append('<p>' +element.first_name+' '+element.last_name+'</p>')
@@ -20,13 +20,13 @@ $(document).ready(function(){
       web : $('input[name="web"]').val()
     };
     console.log('usuario', usuario);
-    /*
-    $.post($(this).attr('action'), usuario, function(response){
-      console.log('post reponse', response);
-    }).done(function(){
-      alert('usuario añadido correctamente');
-    });
-    */
+    
+    // $.post($(this).attr('action'), usuario, function(response){
+    //   console.log('post reponse', response);
+    // }).done(function(){
+    //   alert('usuario añadido correctamente');
+    // });
+    
     // ------------------- Usando $.ajax -----------------------
 
     $.ajax({
@@ -40,6 +40,7 @@ $(document).ready(function(){
       },
       success : function(response){
         console.log('seccess(response)', response);
+        console.log('url : ',$(this).attr('action')); 
       },
       error : function(){
         console.log('error', 'Ha ocurrido un error . . . . ');        

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JQuery & Ajax - Devolución de llamada</title>
+  <script type="text/javascript" src="js/jquery-3.6.1.min.js" ></script> <!-- ----------- cargando JQuery ----------- -->
+  <script>
+    $(document).ready(function(){
+      $('button').click(function(){
+        $('#div1').load('txt/demo_test.txt', function(responseTxt, statusTxt, xhr){
+          if (statusTxt == 'success')
+            console.log('External content load succesfully!!');
+          if(statusTxt == 'error')
+            console.log('Error : '+ xhr.status + ' : '+ xhr.statusTxt);
+        });
+      });
+    });
+  </script>
+</head>
+<body>
+  <h1>JQuery & Ajax - Devolución de llamada</h1>
+  <h3>Llamada aun archivo TXT : txt/demo_test.txt</h3>
+  <hr>
+  <br>
+  <div id="div1"> <h2>Let JQuery Ajax change this text</h2></div> <br>
+  <button>Get external content</button>
+  
+</body>
+</html>

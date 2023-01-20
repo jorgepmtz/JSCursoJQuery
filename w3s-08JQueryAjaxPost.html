@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JQuery & Ajax - Método Get</title>
+  <script type="text/javascript" src="js/jquery-3.6.1.min.js" ></script> <!-- ----------- cargando JQuery ----------- -->
+  <script>
+    $(document).ready(function(){
+      console.log('Listo!');
+      $('button').click(function(){
+        $.post('txt/demo_test_post.asp', {
+          name: 'Donald Duck',
+          city: 'Duckland'
+        },
+          function(data, status){
+            alert('Data : ' + data +  '\nStatus : ' + status);
+        });
+      });
+      console.log('name ',name);
+        
+    }); // --------- fin document.ready --------
+  </script>  
+</head>
+<body>
+  <h1>JQuery & Ajax - Método Post</h1>
+  <br>
+  <hr>
+  <br>
+  <button>Send an HTTP POST request to a page and get the result back</button>
+</body>
+</html>

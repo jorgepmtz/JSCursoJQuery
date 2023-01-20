@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JQuery & Ajax - Método Get</title>
+  <script type="text/javascript" src="js/jquery-3.6.1.min.js" ></script> <!-- ----------- cargando JQuery ----------- -->
+  <script>
+    $(document).ready(function(){  
+      console.log('ready');
+      $('button').click(function(){
+        $.get('txt/demo_test_get.asp', function(data, status){
+          alert('data : ' + data + '\nStatus : ' + status);
+        });
+      });
+    }); // --------- fin document.ready --------
+  </script>  
+</head>
+<body>
+  <h1>JQuery & Ajax - Método Get</h1>
+  <br>
+  <hr>
+  <br>
+  <button>Send an HTTP GET request to a page and get the result back</button>
+</body>
+</html>
